@@ -1,13 +1,17 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class WeatherService {
-  constructor(private http: Http) {}
+  constructor(protected http: Http) {}
 
 
-
-  getWeather() {
+  /**
+   * @function getWeather
+   * @return {Observable<any>}
+   */
+  getWeather(): Observable<any> {
     const lat: Number = 33.4249770;
     const lon: Number = -111.9419140;
 
