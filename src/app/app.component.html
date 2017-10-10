@@ -3,6 +3,10 @@
 </h1>
 
 <h2 align="center">{{ description }}</h2>
-<div style="margin: auto; text-align: center">
-    <img src="{{ icon }}" />{{ celsius2Fahrenheit() | number : '.2'}}&deg;F;
+<div style="margin: auto; text-align: center;">
+    <img src="{{ icon }}" align="center" />
 </div>
+<div style="margin: auto; text-align: center;">
+    {{ celsius2Fahrenheit() | number : '.2'}}&deg;F
+</div>
+<button>&deg;Celsius</button>
