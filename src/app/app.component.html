@@ -1,10 +1,16 @@
-<h1 align="center">
-  {{title}}
-</h1>
+<div class="container">
+  <div class="title-ribbon">
+  <span class="title-text">
+    <h1>{{title}}</h1>
+  </span>
+</div>
 
-<div class="centerStage">
+
+<div class="canvas">
 <h2 align="center">{{ description }}</h2>
     <img src="{{ icon }}" align="center" /><br />
     {{ celsius2Fahrenheit() | number : '.2'}}&deg;F
-<button>&deg;Celsius</button>
+<button class="mdc-button mdc-button--raised">&deg;Celsius</button>
 </div>
+</div>
+

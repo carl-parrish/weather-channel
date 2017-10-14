@@ -1,5 +1,8 @@
-.centerStage {
+.container {
     display: grid;
+}
+
+.canvas {
     margin: auto;
     text-align: center;
 }
