@@ -39,10 +39,18 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * @function celsius2Fahrenheit(
-   * return (Number)
+   * @function celsius2Fahrenheit
+   * @return (Number)
    */
   public celsius2Fahrenheit(): number {
     return this.temp * (9 / 5) + 32;
+  }
+
+  /**
+   * @function toggleCelsius
+   * return void
+   */
+  public toggleCelsius(): void {
+    this.inCelsius = !this.inCelsius;
   }
 }
