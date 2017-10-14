@@ -8,10 +8,11 @@ import { WeatherService } from './services/weather.service';
 })
 
 export class AppComponent implements OnInit {
-  public title: string = "Carl's Weather Project";
-  public description: string = '';
-  public icon: string = '';
+  public title = 'Carl\'s Weather Project';
+  public description = '';
+  public icon = '';
   public temp: number;
+  public inCelsius = false;
 
   constructor(private weatherService: WeatherService) {
   }
