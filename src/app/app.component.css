@@ -15,6 +15,13 @@
   font-weight: 700;
 }
 
+.title-text {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 28px;
+  text-align: center;
+}
+
+
 .title-ribbon {
     grid-columns: 1 / span 3;
     grid-rows: 1;
