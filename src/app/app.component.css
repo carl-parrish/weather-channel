@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 38px 2fr;
+  grid-template-column: 1fr 3fr 1fr;
+  grid-template-row: 38px 2fr;
 
 }
 
@@ -23,8 +23,8 @@
 
 
 .title-ribbon {
-    grid-columns: span 3;
-    grid-rows: 1;
+    grid-column: span 3;
+    grid-row: 1;
     background-color: black;
     color: white;
 }
