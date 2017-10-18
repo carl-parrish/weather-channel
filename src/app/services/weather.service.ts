@@ -12,9 +12,11 @@ export class WeatherService {
    * @function getWeather
    * @return {Observable<any>}
    */
-  getWeather(): Observable<any> {
-    const lat: Number = 33.4249770;
-    const lon: Number = -111.9419140;
+  getWeather(position): Observable<any> {
+    //const lat: Number = 33.4249770;
+    //const lon: Number = -111.9419140;
+    const lat: Number = position.coords.latitude;
+    const lon: Number = position.coords.longitude;
 
     return this.http.get('https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&lon=' + lon);
   }

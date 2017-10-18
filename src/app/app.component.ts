@@ -18,15 +18,18 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getWeather();
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(this.getWeather);
+    }
+    //this.getWeather();
   }
 
   /**
    * @function getWeather
    * @return (void)
    */
-  public getWeather(): void {
-    this.weatherService.getWeather().subscribe(
+  public getWeather(position): void {
+    this.weatherService.getWeather(position).subscribe(
       res => {
         const weather = JSON.parse(res._body).weather[0];
         const main = JSON.parse(res._body).main;
