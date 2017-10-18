@@ -21,7 +21,13 @@ export class AppComponent implements OnInit {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.weatherService.getWeather(position).subscribe(
-          res => console.log(res)
+          res => {
+            const weather = JSON.parse(res._body).weather[0];
+            const main = JSON.parse(res._body).main;
+            this.description = weather.description;
+            this.icon = weather.icon;
+            this.temp = main.temp;
+          }
         );
       });
     }
@@ -44,8 +50,6 @@ export class AppComponent implements OnInit {
         },
         error => console.error('Error: ' + error)
       );
-    } else {
-      console.log('No this selected. ');
     }
   }
 
@@ -62,6 +66,6 @@ export class AppComponent implements OnInit {
    * return void
    */
   public toggleCelsius(): void {
-    this.inCelsius = !this.inCelsius;
+    this.inCelsius = !(this.inCelsius);
   }
 }
