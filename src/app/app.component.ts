@@ -21,14 +21,15 @@ export class AppComponent implements OnInit {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(this.getWeather);
     }
-    //this.getWeather();
   }
 
   /**
    * @function getWeather
+   * @param position
    * @return (void)
    */
   public getWeather(position): void {
+    console.log(this);
     this.weatherService.getWeather(position).subscribe(
       res => {
         const weather = JSON.parse(res._body).weather[0];
