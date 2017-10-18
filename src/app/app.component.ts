@@ -8,7 +8,7 @@ import { WeatherService } from './services/weather.service';
 })
 
 export class AppComponent implements OnInit {
-  public title = 'Carl\'s Weather Project';
+  public title = 'Carl\'s Angular Weather Project';
   public description = '';
   public icon = '';
   public tempInCelsius: number;
