@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-column: 1fr 3fr 1fr;
-  grid-template-row: 38px 2fr 20px;
+  grid-template-row: 38px 2fr 1fr 20px;
 
 }
 
@@ -23,7 +23,7 @@ main {
 }
 .canvas {
   text-align: center;
-  grid-column: 2;
+  grid-column: span 3;
   grid-row-start: 2;
 }
 
@@ -52,7 +52,7 @@ footer {
   color: floralwhite;
   text-decoration:none;
   padding:4px 6px;
-  font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-family:'-apple-system', BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
   font-size:12px;
   font-weight:bold;
   line-height:1.2;
