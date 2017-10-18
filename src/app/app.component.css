@@ -5,6 +5,22 @@
 
 }
 
+main {
+  background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1280.jpg') no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  main {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1920.jpg') no-repeat;
+  }
+}
 .canvas {
   text-align: center;
   grid-column: 2;
@@ -22,14 +38,14 @@
 }
 
 
-.title-ribbon {
+header {
     grid-column: span 3;
     grid-row: 1;
     background-color: black;
     color: floralwhite;
 }
 
-.credit {
+footer {
   grid-column: 3;
   grid-row: 3;
   background-color: black;
