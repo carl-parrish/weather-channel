@@ -33,25 +33,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  /**
-   * @function getWeather
-   * @param position
-   * @return (void)
-   */
-  public getWeather(position): void {
-    if (this.weatherService) {
-      this.weatherService.getWeather(position).subscribe(
-        res => {
-          const weather = JSON.parse(res._body).weather[0];
-          const main = JSON.parse(res._body).main;
-          this.description = weather.description;
-          this.icon = weather.icon;
-          this.temp = main.temp;
-        },
-        error => console.error('Error: ' + error)
-      );
-    }
-  }
 
   /**
    * @function celsius2Fahrenheit
@@ -66,6 +47,8 @@ export class AppComponent implements OnInit {
    * return void
    */
   public toggleCelsius(): void {
+    console.log('Before setting: ' + this.inCelsius);
     this.inCelsius = !(this.inCelsius);
+    console.log('After setting: ' + this.inCelsius);
   }
 }
