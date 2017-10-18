@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { WeatherService } from './services/weather.service';
 
 import { AppComponent } from './app.component';
+import { TemperaturePipe } from './temperature.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TemperaturePipe
   ],
   imports: [
     BrowserModule,
