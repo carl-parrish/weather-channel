@@ -8,7 +8,7 @@
 main {
   grid-template-rows: minmax(100px, 100px);
   background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
 }
 
@@ -33,7 +33,7 @@ section {
   grid-row-start: 3;
   grid-column-start: 2;
   z-index: 1;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.8);
   color: ghostwhite;
 }
 
@@ -57,7 +57,7 @@ header {
 
 footer {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 4;
   background-color: black;
   color: floralwhite;
   text-decoration:none;
