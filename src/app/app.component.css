@@ -20,13 +20,13 @@ main {
 @media only screen and (min-width: 1300px) {
   main {
     background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1920.jpg') no-repeat;
+    background-size: cover;
   }
 }
 .canvas {
 
   grid-column: 1/ span 3;
   grid-row-start: 2;
-  grid-row-end: 4;
 }
 
 section {
