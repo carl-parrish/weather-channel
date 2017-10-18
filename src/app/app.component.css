@@ -8,7 +8,7 @@
 main {
   grid-template-rows: minmax(100px, 100px);
   background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   height: 100%;
 }
 
@@ -24,15 +24,17 @@ main {
   }
 }
 .canvas {
-  text-align: center;
+
   grid-column: span 3;
   grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 section {
   grid-row-start: 3;
   grid-column-start: 2;
   z-index: 1;
+  text-align: center;
   background: rgba(0,0,0,0.8);
   color: ghostwhite;
 }
