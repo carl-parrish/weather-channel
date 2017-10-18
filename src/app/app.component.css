@@ -12,13 +12,13 @@ main {
   height: 100%;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1000px) {
   main {
     background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1280.jpg') no-repeat;
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1300px) {
   main {
     background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1920.jpg') no-repeat;
   }
