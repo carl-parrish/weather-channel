@@ -7,7 +7,8 @@
 
 main {
   background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
-  background-size: cover;
+  background-size: contain;
+  height: 100%;
 }
 
 @media only screen and (min-width: 1280px) {
