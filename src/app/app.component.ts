@@ -19,7 +19,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(this.getWeather);
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.weatherService.getWeather(position).subscribe(
+          res => console.log(res)
+        );
+      });
     }
   }
 
@@ -29,17 +33,20 @@ export class AppComponent implements OnInit {
    * @return (void)
    */
   public getWeather(position): void {
-    console.log(this);
-    this.weatherService.getWeather(position).subscribe(
-      res => {
-        const weather = JSON.parse(res._body).weather[0];
-        const main = JSON.parse(res._body).main;
-        this.description = weather.description;
-        this.icon = weather.icon;
-        this.temp = main.temp;
-      },
-      error => console.error('Error: ' + error)
-    );
+    if (this.weatherService) {
+      this.weatherService.getWeather(position).subscribe(
+        res => {
+          const weather = JSON.parse(res._body).weather[0];
+          const main = JSON.parse(res._body).main;
+          this.description = weather.description;
+          this.icon = weather.icon;
+          this.temp = main.temp;
+        },
+        error => console.error('Error: ' + error)
+      );
+    } else {
+      console.log('No this selected. ');
+    }
   }
 
   /**
