@@ -7,13 +7,13 @@
 
 main {
   background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 1000px) {
   main {
     background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1280.jpg') no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
   }
 }
 
