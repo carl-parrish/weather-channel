@@ -12,7 +12,7 @@
   <section>
     <span class="info-box">{{ description }}</span>
     <img src="{{ icon }}" align="center"/><br/>
-    {{ (showCelsius) ? (tempInCelsius | temperature : 'C') : (tempInFahrenheit | temperature : 'F') }}<br />
+    <span class="temp-text">{{ (showCelsius) ? (tempInCelsius | temperature : 'C') : (tempInFahrenheit | temperature : 'F') }}</span><br />
     <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleCelsius()">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
   </section>
 

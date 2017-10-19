@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-column: 1fr 3fr 1fr;
-  grid-template-row: 38px 100vh 100vh 20px;
+  grid-template-row: 38px 50vh 100vh 50vh 20px;
 
 }
 
@@ -26,7 +26,7 @@ main {
 .canvas {
 
   grid-column: 1 / span 3;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
   height: 200vh;
 }
 
@@ -41,6 +41,10 @@ section {
 
 .info-box {
   font-weight: 700;
+}
+
+.temp-text {
+  font-size: 48px;
 }
 
 .title-text {
