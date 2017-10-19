@@ -1,7 +1,7 @@
 .container {
   display: grid;
-  grid-template-column: 1fr 3fr 1fr;
-  grid-template-row: 38px 50vh 100vh 50vh 20px;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 38px 50vh 100vh 50vh 20px;
 
 }
 
@@ -26,7 +26,7 @@ main {
 .canvas {
 
   grid-column: 1 / span 3;
-  grid-row: 2 / span 3;
+  grid-row: 2 / span 4;
   height: 200vh;
 }
 
@@ -44,7 +44,8 @@ section {
 }
 
 .temp-text {
-  font-size: 48px;
+  font-size: 62px;
+  font-weight: 800;
 }
 
 .title-text {
@@ -63,7 +64,7 @@ header {
 
 footer {
   grid-column: 3;
-  grid-row: 4;
+  grid-row: 5;
   background-color: black;
   color: floralwhite;
   text-decoration:none;
