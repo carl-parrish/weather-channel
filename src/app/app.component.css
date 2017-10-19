@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-column: 1fr 3fr 1fr;
-  grid-template-row: 38px 4fr 1fr 20px;
+  grid-template-row: 38px 200vh 200vh 20px;
 
 }
 
