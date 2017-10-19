@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-column: 1fr 3fr 1fr;
-  grid-template-row: 38px 200vh 200vh 20px;
+  grid-template-row: 38px 100vh 100vh 20px;
 
 }
 
@@ -27,7 +27,7 @@ main {
 
   grid-column: 1 / span 3;
   grid-row: 2 / span 2;
-  height: 400vh;
+  height: 200vh;
 }
 
 section {
