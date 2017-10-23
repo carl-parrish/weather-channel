@@ -28,9 +28,7 @@ export class AppComponent implements OnInit {
             this.description = weather.description;
             this.icon = weather.icon;
             this.tempInCelsius = main.temp;
-            //this.tempInFahrenheit = this.celsius2Fahrenheit(this.tempInCelsius);
-            this.tempInFahrenheit = 24;
-          }
+            this.tempInFahrenheit = this.celsius2Fahrenheit(this.tempInCelsius);
         );
       });
     }
