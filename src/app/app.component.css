@@ -23,6 +23,26 @@ main {
     background-size: cover;
   }
 }
+
+main.cold {
+  background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-640.jpg') no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+  main.cold{
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1280.jpg') no-repeat;
+    bacground-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  main.cold {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1920.jpg') no-repeat;
+    bacground-size: cover;
+  }
+}
+
 .canvas {
 
   grid-column: 1 / span 3;
