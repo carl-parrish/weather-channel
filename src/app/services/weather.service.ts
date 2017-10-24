@@ -13,8 +13,8 @@ export class WeatherService {
    * @return {Observable<any>}
    */
   getWeather(position): Observable<any> {
-    //const lat: Number = 33.4249770;
-    //const lon: Number = -111.9419140;
+    // const lat: Number = 33.4249770;
+    // const lon: Number = -111.9419140;
     const lat: Number = position.coords.latitude;
     const lon: Number = position.coords.longitude;
 
