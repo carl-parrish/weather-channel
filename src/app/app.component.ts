@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
             this.icon = weather.icon;
             this.tempInCelsius = main.temp;
             this.tempInFahrenheit = this.celsius2Fahrenheit(this.tempInCelsius);
-        );
+          });
       });
     }
   }
@@ -44,10 +44,12 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * @function toggleCelsius
+   * @function toggleValue
+   * @description - Return the compliment of the current value
+   * param (boolean) showCelsius
    * return boolean
    */
-  public toggleCelsius(): boolean {
-    return !this.showCelsius;
+  public toggleValue(showCelsius: boolean): boolean {
+    return !showCelsius;
   }
 }

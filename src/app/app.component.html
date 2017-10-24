@@ -14,7 +14,7 @@
                                 (tempInCelsius | temperature : 'C') :
                                 (tempInFahrenheit | temperature : 'F') }}
     </span><br />
-    <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleCelsius()">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
+    <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleValue(showCelsius)">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
   </section>
 
   <footer>
