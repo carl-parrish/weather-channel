@@ -12,8 +12,8 @@
     <img src="{{ icon }}" align="center"/><br/>
     <fa *ngIf="!tempInFahrenheit"
         [name]="'fa-spinner'"
-        [size]="5"
-        [spin]="true"
+        [size]=5
+        [spin]=true
         ></fa>
     <span *ngIf="tempInFahrenheit" class="temp-text">{{ (showCelsius) ?
       (tempInCelsius | temperature : 'C') : (tempInFahrenheit | temperature : 'F') }} </span><br />
