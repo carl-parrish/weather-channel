@@ -1,46 +1,11 @@
+/*************
+* Layout
+**************/
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 38px 20vh 50vh 25vh 20px;
 
-}
-
-main {
-  background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 1000px) {
-  main {
-    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1280.jpg') no-repeat;
-    background-size: cover;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  main {
-    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1920.jpg') no-repeat;
-    background-size: cover;
-  }
-}
-
-main.cold {
-  background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-640.jpg') no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 1000px) {
-  main.cold{
-    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1280.jpg') no-repeat;
-    bacground-size: cover;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  main.cold {
-    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1920.jpg') no-repeat;
-    bacground-size: cover;
-  }
 }
 
 .canvas {
@@ -59,28 +24,11 @@ section {
   color: ghostwhite;
 }
 
-.info-box {
-  fong-size: 48px;
-  font-weight: 700;
-}
-
-.temp-text {
-  font-size: 62px;
-  font-weight: 800;
-}
-
-.title-text {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 28px;
-  text-align: center;
-}
-
-
 header {
-    grid-column: span 3;
-    grid-row: 1;
-    background-color: black;
-    color: floralwhite;
+  grid-column: span 3;
+  grid-row: 1;
+  background-color: black;
+  color: floralwhite;
 }
 
 footer {
@@ -97,3 +45,74 @@ footer {
   display:inline-block;
   border-radius:3px;
 }
+
+main {
+  background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
+  background-size: cover;
+}
+
+main.cold {
+  background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-640.jpg') no-repeat;
+  /*background-size: cover;*/
+}
+
+main.hot {
+  background: url('https://s3-us-west-2.amazonaws.com/sourcecodesamurai/namibia-640.jpg') no-repeat;
+  /*background-size: cover;*/
+}
+
+
+/**********************
+* Media Queries
+ *********************/
+
+@media only screen and (min-width: 1000px) {
+  main {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1280.jpg') no-repeat;
+  }
+
+  main.cold{
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1280.jpg') no-repeat;
+  }
+
+  main.hot {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1280.jpg') no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  main {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_1920.jpg') no-repeat;
+  }
+
+  main.cold {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1920.jpg') no-repeat;
+  }
+
+  main.hot {
+    background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-1920.jpg') no-repeat;
+  }
+}
+
+
+/*****************
+* Fonts
+*****************/
+
+.info-box {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.temp-text {
+  font-size: 62px;
+  font-weight: 800;
+}
+
+.title-text {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 28px;
+  text-align: center;
+}
+
+
