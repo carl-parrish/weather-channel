@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './services/weather.service';
+import {TemperaturePipe} from './temperature.pipe';
+
 
 @Component({
              selector: 'app-root',
@@ -27,8 +29,8 @@ export class AppComponent implements OnInit {
             const main = JSON.parse(res._body).main;
             this.description = weather.description;
             this.icon = weather.icon;
-            this.tempInCelsius = main.temp;
-            this.tempInFahrenheit = this.celsius2Fahrenheit(this.tempInCelsius);
+            this.tempInCelsius = new TemperaturePipe().transform(main.temp, 'C');
+            this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(main.temp), 'F');
           });
       });
     }

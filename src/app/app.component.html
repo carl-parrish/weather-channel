@@ -10,13 +10,7 @@
   <section>
     <span class="info-box">{{ description }}</span>
     <img src="{{ icon }}" align="center"/><br/>
-    <fa
-        [name]="'fa-spinner'"
-        [size]=5
-        [spin]=true
-        ></fa>
-    <span *ngIf="tempInFahrenheit" class="temp-text">{{ (showCelsius) ?
-      (tempInCelsius | temperature : 'C') : (tempInFahrenheit | temperature : 'F') }} </span><br />
+    <span *ngIf="tempInFahrenheit" class="temp-text">{{ (showCelsius) ? tempInCelsius : tempInFahrenheit }} </span><br />
     <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleValue(showCelsius)">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
   </section>
 
