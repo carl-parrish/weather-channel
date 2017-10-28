@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
             this.description = weather.description;
             this.icon = weather.icon;
             // this.temperature = main.temp;
-            this.temperature = 40;
+            this.temperature = -26;
             this.tempInCelsius = new TemperaturePipe().transform(this.temperature, 'C');
             this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(this.temperature), 'F');
           });
