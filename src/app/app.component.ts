@@ -30,8 +30,7 @@ export class AppComponent implements OnInit {
             const main = JSON.parse(res._body).main;
             this.description = weather.description;
             this.icon = weather.icon;
-            // this.temperature = main.temp;
-            this.temperature = -26;
+            this.temperature = main.temp;
             this.tempInCelsius = new TemperaturePipe().transform(this.temperature, 'C');
             this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(this.temperature), 'F');
           });
