@@ -13,8 +13,9 @@ export class AppComponent implements OnInit {
   public title = 'Carl\'s Angular Weather Project';
   public description = '';
   public icon = '';
-  public tempInCelsius: number;
-  public tempInFahrenheit: number;
+  public temperature: number;
+  public tempInCelsius: string;
+  public tempInFahrenheit: string;
   public showCelsius = false;
 
   constructor(private weatherService: WeatherService) {
@@ -29,9 +30,10 @@ export class AppComponent implements OnInit {
             const main = JSON.parse(res._body).main;
             this.description = weather.description;
             this.icon = weather.icon;
+            this.temperature = main.temp;
             this.tempInCelsius = new TemperaturePipe().transform(main.temp, 'C');
-            //this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(main.temp), 'F');
-            this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(105), 'F');
+            // this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(main.temp), 'F');
+            this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(40), 'F');
           });
       });
     }
