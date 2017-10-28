@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './services/weather.service';
+import {TemperaturePipe} from './temperature.pipe';
+
 
 @Component({
              selector: 'app-root',
@@ -11,8 +13,9 @@ export class AppComponent implements OnInit {
   public title = 'Carl\'s Angular Weather Project';
   public description = '';
   public icon = '';
-  public tempInCelsius: number;
-  public tempInFahrenheit: number;
+  public temperature: number;
+  public tempInCelsius: string;
+  public tempInFahrenheit: string;
   public showCelsius = false;
 
   constructor(private weatherService: WeatherService) {
@@ -27,10 +30,10 @@ export class AppComponent implements OnInit {
             const main = JSON.parse(res._body).main;
             this.description = weather.description;
             this.icon = weather.icon;
-            this.tempInCelsius = main.temp;
-            this.tempInFahrenheit = this.celsius2Fahrenheit(this.tempInCelsius);
-          }
-        );
+            this.temperature = main.temp;
+            this.tempInCelsius = new TemperaturePipe().transform(this.temperature, 'C');
+            this.tempInFahrenheit = new TemperaturePipe().transform(this.celsius2Fahrenheit(this.temperature), 'F');
+          });
       });
     }
   }
@@ -45,10 +48,12 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * @function toggleCelsius
+   * @function toggleValue
+   * @description - Return the compliment of the current value
+   * param (boolean) showCelsius
    * return boolean
    */
-  public toggleCelsius(): boolean {
-    return !this.showCelsius;
+  public toggleValue(showCelsius: boolean): boolean {
+    return !showCelsius;
   }
 }

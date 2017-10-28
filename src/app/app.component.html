@@ -1,19 +1,22 @@
 <div class="container">
   <header>
-  <span class="title-text">
-    {{title}}
-  </span>
+    <span class="title-text">{{title}}</span>
   </header>
 
 
-  <main class="canvas">
+  <main class="canvas" [ngClass]="{cold: temperature < 0, hot: temperature > 38}">
     &nbsp;
   </main>
   <section>
     <span class="info-box">{{ description }}</span>
     <img src="{{ icon }}" align="center"/><br/>
-    <span class="temp-text">{{ (showCelsius) ? (tempInCelsius | temperature : 'C') : (tempInFahrenheit | temperature : 'F') }}</span><br />
-    <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleCelsius()">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
+    <fa *ngIf="!tempInFahrenheit"
+        [name]="'fa-spinner'"
+        [size]=3
+        [spin]=true
+    ></fa>
+    <span *ngIf="tempInFahrenheit" class="temp-text">{{ (showCelsius) ? tempInCelsius : tempInFahrenheit }} </span><br />
+    <button class="mdc-button mdc-button--raised" (click)="showCelsius = toggleValue(showCelsius)">&deg;{{(showCelsius)? 'Fahrenheit':'Celsius'}}</button>
   </section>
 
   <footer>
