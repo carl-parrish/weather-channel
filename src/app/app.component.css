@@ -1,6 +1,7 @@
-/*************
+/**********************
 * Layout
-**************/
+**********************/
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -9,7 +10,6 @@
 }
 
 .canvas {
-
   grid-column: 1 / span 3;
   grid-row: 2 / span 4;
   height: 100vh;
@@ -46,6 +46,10 @@ footer {
   border-radius:3px;
 }
 
+/**********************
+* Background Images
+**********************/
+
 main {
   background: url('https://s3-us-west-2.amazonaws.com/green-party/water-2522629_640.jpg') no-repeat;
   background-size: cover;
@@ -53,12 +57,10 @@ main {
 
 main.cold {
   background: url('https://s3-us-west-2.amazonaws.com/green-party/runners-head-640.jpg') no-repeat;
-  /*background-size: cover;*/
 }
 
 main.hot {
   background: url('https://s3-us-west-2.amazonaws.com/sourcecodesamurai/namibia-640.jpg') no-repeat;
-  /*background-size: cover;*/
 }
 
 
@@ -95,9 +97,9 @@ main.hot {
 }
 
 
-/*****************
+/**********************
 * Fonts
-*****************/
+**********************/
 
 .info-box {
   font-size: 48px;
