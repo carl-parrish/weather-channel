@@ -11,8 +11,7 @@
     <span class="info-box">{{ description }}</span>
     <img src="{{ icon }}" align="center"/><br/>
     <fa *ngIf="!tempInFahrenheit"
-        [name]="'fa-spinner'"
-        [size]=3
+        [name]="fa-spinner"
         [spin]=true
     ></fa>
     <span *ngIf="tempInFahrenheit" class="temp-text">{{ (showCelsius) ? tempInCelsius : tempInFahrenheit }} </span><br />
