@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TemperaturePipe implements PipeTransform {
 
   transform(value: number, scale: string): any {
-    return new DecimalPipe('en-us').transform(value, '1.0') + '\xB0' + scale;
+    return new DecimalPipe('en-us').transform(Math.round(value), '1') + '\xB0' + scale;
   }
 
 }
