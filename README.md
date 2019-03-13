@@ -1,6 +1,6 @@
 # Show the Local Weather (Angular) 
 
-**Objective:** Build an app that is functionally similar to [this](http://codepen.io/FreeCodeCamp/full/bELRjV).
+**Objective:** Build an app that is functionally similar to [this](http://codepen.io/FreeCodeCamp/full/bELRjV). Hosted by [netlify](https://www.netlify.com/)
 
 ## User Story:
 I can see the weather in my current location
